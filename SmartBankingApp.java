@@ -106,5 +106,87 @@ public class SmartBankingApp{
                             }
                         }
                     } while (!valid);
+                     String initialAccountBalance;
+
+                    loopTwo:
+                     do {
+                        valid = true;
+                        System.out.printf("\tInitial Deposit: ");
+                        initialAccountBalance = SCANNER.nextLine();
+                        if (initialAccountBalance.length() > 4) {
+                            for (int j = 0; j < initialAccountBalance.length() - 3; j++) {
+                                if (!Character.isDigit(initialAccountBalance.charAt(j))) {
+                                    valid = false;
+                                    System.out.printf(ERROR_MSG, "Enter a Valid Amount");
+                                    continue loopTwo;
+                                }
+                            }
+                            if (!(initialAccountBalance.charAt((initialAccountBalance.length() - 3)) == '.' || Character
+                                    .isDigit(initialAccountBalance.charAt(initialAccountBalance.length() - 3)))) {
+                                valid = false;
+                                System.out.printf(ERROR_MSG, "Enter a Valid Amount ");
+                                continue loop2;
+
+                            } else {
+                                for (int j = initialAccountBalance.length() - 2; j < initialAccountBalance
+                                        .length(); j++) {
+                                    if (!Character.isDigit(initialAccountBalance.charAt(j))) {
+                                        valid = false;
+                                        System.out.printf(ERROR_MSG, "Enter a Valid Amount");
+                                        continue loopTwo;
+                                    }
+                                }
+
+                            }
+                        }else{
+                             for (int j = 0; j < initialAccountBalance.length(); j++) {
+                                if (!Character.isDigit(initialAccountBalance.charAt(j))) {
+                                    valid = false;
+                                    System.out.printf(ERROR_MSG, "Enter a Valid Amount");
+                                    continue loopTwo;
+                                }
+                            }
+                        }
+                        String initialAccountBalance;
+                        loopTwo:
+                         do {
+                            valid = true;
+                            System.out.printf("\tInitial Deposit: ");
+                            initialAccountBalance = SCANNER.nextLine();
+                            if (initialAccountBalance.length() > 4) {
+                                for (int j = 0; j < initialAccountBalance.length() - 3; j++) {
+                                    if (!Character.isDigit(initialAccountBalance.charAt(j))) {
+                                        valid = false;
+                                        System.out.printf(ERROR_MSG, "Enter a Valid Amount");
+                                        continue loop2;
+                                    }
+                                }
+                                if (!(initialAccountBalance.charAt((initialAccountBalance.length() - 3)) == '.' || Character
+                                        .isDigit(initialAccountBalance.charAt(initialAccountBalance.length() - 3)))) {
+                                    valid = false;
+                                    System.out.printf(ERROR_MSG, "Enter a Valid Amount ");
+                                    continue loop2;
+    
+                                } else {
+                                    for (int j = initialAccountBalance.length() - 2; j < initialAccountBalance
+                                            .length(); j++) {
+                                        if (!Character.isDigit(initialAccountBalance.charAt(j))) {
+                                            valid = false;
+                                            System.out.printf(ERROR_MSG, "Enter a Valid Amount");
+                                            continue loop2;
+                                        }
+                                    }
+    
+                                }
+                            }else{
+                                 for (int j = 0; j < initialAccountBalance.length(); j++) {
+                                    if (!Character.isDigit(initialAccountBalance.charAt(j))) {
+                                        valid = false;
+                                        System.out.printf(ERROR_MSG, "Enter a Valid Amount");
+                                        continue loop2;
+                                    }
+                                }
+                            }
+    
     }
 }
