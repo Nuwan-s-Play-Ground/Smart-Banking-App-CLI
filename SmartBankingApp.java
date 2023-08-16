@@ -78,6 +78,7 @@ public class SmartBankingApp {
                             continue;
                     }
                     break;
+
                 case CREATE_ACCOUNT:
 
                     String id = String.format("SDB-" + "%05d", i);
@@ -105,6 +106,7 @@ public class SmartBankingApp {
                             }
                         }
                     } while (!valid);
+
                     String initialAccountBalance;
 
                     loopTwo:
@@ -167,6 +169,7 @@ public class SmartBankingApp {
                         }
 
                     } while (!valid);
+
                     initialAccountBalanceDouble = Double.parseDouble(initialAccountBalance);
                     System.out.printf("\tDeposited: " + "%s%,.2f", "Rs.", initialAccountBalanceDouble);
 
@@ -193,6 +196,7 @@ public class SmartBankingApp {
                         continue;
                     screen = DASHBOARD;
                     break;
+                    
                 case DEPOSIT:
 
             }
