@@ -79,6 +79,32 @@ public class SmartBankingApp{
                     }
                     break;
 
+                    case CREATE_ACCOUNT:
 
+                    String id = String.format("SDB-" + "%05d", i);
+                    System.out.printf("\tID: %s\n", id);
+                    i++;
+                    String name;
+                    boolean valid;
+                    double initialAccountBalanceDouble;
+
+                    do {
+                        valid = true;
+                        System.out.print("\tName: ");
+                        name = SCANNER.nextLine().strip();
+                        if (name.isBlank()) {
+                            System.out.printf(ERROR_MSG, "Name can't be empty");
+                            valid = false;
+                            continue;
+                        }
+                        for (int j = 0; j < name.length(); j++) {
+                            if (!(Character.isLetter(name.charAt(j)) ||
+                                    Character.isSpaceChar(name.charAt(j)))) {
+                                System.out.printf(ERROR_MSG, "Invalid name");
+                                valid = false;
+                                break;
+                            }
+                        }
+                    } while (!valid);
     }
 }
