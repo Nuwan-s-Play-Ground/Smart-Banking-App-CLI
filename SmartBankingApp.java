@@ -30,7 +30,7 @@ public class SmartBankingApp{
         String screen = DASHBOARD;
         int i = 1;
 
-        loop1: do {
+        loopOne: do {
             final String APP_TITLE = String.format("%s%s%s", COLOR_BLUE_BOLD, screen, RESET);
 
             System.out.println(CLEAR);
